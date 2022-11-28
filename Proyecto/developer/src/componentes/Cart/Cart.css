@@ -1,0 +1,67 @@
+.carrito{
+    margin: 2rem
+}
+
+.cart-total h5{
+font-weight: 900;
+}
+
+.carrito-cards {
+  
+  width: 50%;
+}
+
+.carrito-card-title{
+  width: 20%;
+}
+.carrito-card-price{
+  width: 15%;
+}
+
+.carrito-button{
+  width: 10%;
+  padding: 1px;
+}
+
+.carrito-button-eliminar{
+  width: 50%;
+  padding: 10px;
+}
+.container-imagen-td {
+  
+  width: 20%;
+}
+
+.container-img-carrito {
+  
+  width: 100%;
+}
+
+.container-img-carrito img {
+  
+  width: 100%;
+}
+
+.td-buttons{
+    display: flex;
+    align-items: center;
+  
+}
+.td-buttons td{
+    font-weight: 1rem !important;
+}
+
+.carrito-cantidad{
+  font-weight: 900;
+  font-size: larger;
+}
+
+.carrito-vacio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40.7rem;
+}
+
+
+
