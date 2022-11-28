@@ -1,7 +1,9 @@
 const express = require("express");
+const port = process.env.PORT || 3000;
 const app = express();
+
 const router = express.Router();
-const port = 5050;
+
 const routerU = require('./routes/users.route');
 const routerP = require('./routes/productos.route');
 /**Cadena conexion con mongo */
