@@ -1,19 +1,28 @@
-const express = require('express');
+const express = require("express");
+const port = process.env.PORT || 3000;
 const app = express();
-const port = process.env.PORT || 5000
-const router = require('./routes/users.route');
-const cors = require('cors')
-const errorHandler = require('./middlewares/errorHandler')
-require('./config/mongoConnection');
+
+const router = express.Router();
+
+const routerU = require('./routes/users.route');
+const routerP = require('./routes/productos.route');
+/**Cadena conexion con mongo */
+const mongose = require('mongoose');
+mongose.connect('mongodb://localhost:27017/tienda')
+    .then(() => console.log("Conect MongoDB"))
+    .catch((err) => {
+        console.error(err)
+    });
+/**Fin de cadena conexion */ 
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(router);
+app.use(routerU);
+app.use(routerP);
 
 
-app.use(express.json())  
-app.use(express.urlencoded({ extended: true }))
-app.use(cors())
-app.use(router)
-app.use('/upload', express.static('upload'));
-app.use(errorHandler)
+
 app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
-    }
- );
+    console.log(`Servidor corriendo por el puerto ${port}`);
+})

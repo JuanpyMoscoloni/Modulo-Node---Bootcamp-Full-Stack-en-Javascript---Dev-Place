@@ -1,9 +1,12 @@
-const router = require("express").Router();
-const productsRouter = require("./products/products");
-const adminRouter = require("./admin/admin");
+const express = require("express");
+const routerUser = express.Router();
+const {getUsers,createUser,findByUser,UpdateByUser,deleteByUser} = require('../controllers/userController');
 
-router.use("/products", productsRouter);
+/**Get all users */
+routerUser.get('/users', getUsers);
+routerUser.post('/users',createUser);
+routerUser.get('/users/:id', findByUser);
+routerUser.put('/users/:id',UpdateByUser);
+routerUser.delete('/users/:id',deleteByUser);
 
-router.use("/admin", adminRouter);
-
-module.exports = router;
+module.exports=routerUser;
