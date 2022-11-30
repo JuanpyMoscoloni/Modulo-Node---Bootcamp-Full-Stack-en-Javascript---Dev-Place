@@ -1,0 +1,34 @@
+.cartas-general {
+  width: 100%;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  cursor: pointer;
+  margin: 1% 0% 1% 0%;
+}
+
+.cartas-general:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.container {
+  max-width: 100%;
+  gap: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  overflow-y: hidden;
+}
+
+.contenedor-card-img{
+  width:15rem;
+  height:15rem;
+  margin: auto;
+}
+.contenedor-card-img img{
+  object-fit:contain;
+  width:100%;
+  height:100%;
+}

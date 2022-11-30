@@ -1,0 +1,14 @@
+
+.container-form-group{
+    box-shadow: 5px 5px 30px rgb(224, 223, 223);
+    border: 2px solid rgb(227, 227, 227);
+    justify-content: center;
+    margin: 6rem 10rem 5rem 10rem;
+    border-radius: 1rem;
+}
+
+.container-imagen img{
+    box-shadow: 5px 5px 30px rgb(224, 223, 223);
+    margin: 5rem 1rem 5rem 9rem;
+    width: 70%;
+}
