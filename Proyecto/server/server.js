@@ -1,6 +1,8 @@
 const express = require("express");
-const port = 3000;
+const port = 5050;
 const app = express();
+var cors = require("cors");
+
 
 const router = express.Router();
 
@@ -14,7 +16,7 @@ mongose.connect('mongodb://localhost:27017/tienda')
         console.error(err)
     });
 /**Fin de cadena conexion */ 
-
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(router);

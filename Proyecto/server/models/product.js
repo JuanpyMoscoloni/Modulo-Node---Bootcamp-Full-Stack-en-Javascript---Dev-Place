@@ -5,19 +5,19 @@ const validateRequest = require('../middlewares/validateRequest')
 const productSchema = new mongoose.Schema({
     title:{
         type: String,
-        required: true
+        required: false,
     },
     price: {
         type: Number,
-        required: true
+        required: false,
     },
     img:{
         type: String,
-        required: false
+        required: false,
     },
     type : {
-        type: String,
-        required: true
+        type: Number,
+        required: false,
     },
     quantity : {
         type: Number,

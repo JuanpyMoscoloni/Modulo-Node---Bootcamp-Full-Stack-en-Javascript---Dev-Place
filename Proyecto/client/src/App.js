@@ -13,21 +13,7 @@ import { IPad } from "./componentes/PaginasFiltro/iPad";
 import { IWatch } from "./componentes/PaginasFiltro/iWatch";
 import { CartProvider } from "react-use-cart";
 import CreatePage from "./componentes/CreatePage";
-import axios from "axios";
-const url = "http://localhost:3030/product/post";
 const App = () => {
-  const [archivos, setArchivos] = useState("");
-  const [precio, setPrecio] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const resp = await axios.post(url, { archivos, precio });
-      console.log(resp.data);
-    } catch (error) {
-      console.log(error.response);
-    }
-  };
   
   return (
     <>

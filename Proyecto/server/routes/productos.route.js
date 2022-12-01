@@ -12,7 +12,7 @@ const uploadMulter = require("../config/multer");
 /**Get all productos */
 routerProduct.get("/productos", getProduct);
 routerProduct.post(
-  "/productos",
+  "/productos/post",
   uploadMulter.single("img"),
   createProduct
 );
