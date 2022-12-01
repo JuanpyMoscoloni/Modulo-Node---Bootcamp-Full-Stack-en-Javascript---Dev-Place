@@ -7,13 +7,13 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    img:{
-        type: String,
-        required: false
-    },
     price: {
         type: Number,
         required: true
+    },
+    img:{
+        type: String,
+        required: false
     },
     type : {
         type: String,
@@ -26,7 +26,7 @@ const productSchema = new mongoose.Schema({
     }
 })
 
-const Product = mongoose.model('products', productSchema)
+const Product = mongoose.model('productos', productSchema)
 
 const ValidateProduct = (req, res, next) => {
     const schema = Joi.object({
@@ -57,4 +57,4 @@ const ValidateProduct = (req, res, next) => {
 }
 
 
-module.exports = {Product, ValidateProduct};
+module.exports = {Product, productSchema, ValidateProduct};

@@ -1,5 +1,5 @@
 
-const Product = require('../models/product.model');
+const {Product} = require('../models/product');
 
 const getProduct = async (req, res) => {
     const producto = await Product.find();
@@ -26,8 +26,18 @@ const deleteByProduct = async (req, res) => {
     res.json({ 'message': 'Datos Eliminados' });
 }
 const createProduct = async (req, res) => {
-    const producto = new Product(req.body);
-    producto.save();
-    res.json(producto);
-}
+    const url = req.protocol + "://" + req.get("host");
+    const urlImage = url + "/upload/" + req.file.filename;
+    const modelData = {
+      title : req.body.title,
+      price: req.body.price,
+      img: urlImage,
+      type: req.body.type,
+      quantity: req.body.quantity,
+    };
+  
+    const product = new Product(modelData);
+    product.save();
+    res.json(product);
+  };
 module.exports = { getProduct, createProduct,findByProduct, UpdateByProduct, deleteByProduct }

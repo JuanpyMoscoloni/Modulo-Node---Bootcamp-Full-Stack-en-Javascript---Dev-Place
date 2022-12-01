@@ -1,5 +1,5 @@
 const express = require("express");
-const port = process.env.PORT || 3000;
+const port = 3000;
 const app = express();
 
 const router = express.Router();
@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(router);
 app.use(routerU);
 app.use(routerP);
+app.use(express.static(__dirname));
 
 
 
