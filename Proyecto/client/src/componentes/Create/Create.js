@@ -18,7 +18,7 @@ export default function CrearPublicacion() {
     e.preventDefault();
     try {
       var bodyFormData = new FormData();
-      bodyFormData.append("title", title);
+      bodyFormData.append("title", title);  
       bodyFormData.append("precio", precio);
       bodyFormData.append("type", type);
       bodyFormData.append("img", img[0]);
