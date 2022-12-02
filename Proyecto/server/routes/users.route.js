@@ -1,12 +1,16 @@
 const express = require("express");
-const routerUser = express.Router();
+const router = express.Router();
+
+const { ValidateUser } = require('../models/users.models')
 const {getUsers,createUser,findByUser,UpdateByUser,deleteByUser} = require('../controllers/userController');
+const validateIdMongo = require("../middlewares/validateIdMongo");
+
 
 /**Get all users */
-routerUser.get('/users', getUsers);
-routerUser.post('/users',createUser);
-routerUser.get('/users/:id', findByUser);
-routerUser.put('/users/:id',UpdateByUser);
-routerUser.delete('/users/:id',deleteByUser);
+router.get('/', getUsers);
+router.post('/',ValidateUser,createUser);
+router.get('/:id',validateIdMongo, findByUser);
+router.put('/:id',UpdateByUser);
+router.delete('/:id',validateIdMongo,deleteByUser);
 
-module.exports=routerUser;
+module.exports=router;

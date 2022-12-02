@@ -1,3 +1,4 @@
+require('dotenv').config({path: './.env'});
 const express = require("express");
 const port = 5050;
 const app = express();
@@ -8,6 +9,7 @@ const router = express.Router();
 
 const routerU = require('./routes/users.route');
 const routerP = require('./routes/productos.route');
+const routerL = require('./routes/login.route');
 /**Cadena conexion con mongo */
 const mongose = require('mongoose');
 mongose.connect('mongodb://localhost:27017/tienda')
@@ -22,6 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(router);
 app.use(routerU);
 app.use(routerP);
+app.use(routerL);
 app.use(express.static(__dirname));
 
 
