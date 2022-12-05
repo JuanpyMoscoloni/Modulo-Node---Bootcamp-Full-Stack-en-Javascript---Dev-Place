@@ -1,23 +1,25 @@
-const express = require("express");
+const express = require('express');
 const routerProduct = express.Router();
 const {
-  getProduct,
-  createProduct,
-  findByProduct,
-  UpdateByProduct,
-  deleteByProduct,
-} = require("../controllers/product");
+  createProducts,
+  findByProducts,
+  UpdateByProducts,
+  deleteByProducts,
+  getProducts,
 
-const uploadMulter = require("../config/multer");
+} = require('../controllers/product');
+
+const uploadMulter = require('../config/multer');
 /**Get all productos */
-routerProduct.get("/productos", getProduct);
+
 routerProduct.post(
-  "/productos/post",
-  uploadMulter.single("img"),
-  createProduct
+  '/productos',
+  uploadMulter.single('img'),
+  createProducts
 );
-routerProduct.get("/productos/:id", findByProduct);
-routerProduct.put("/productos/:id", UpdateByProduct);
-routerProduct.delete("/productos/:id", deleteByProduct);
+routerProduct.get('/productos', getProducts);
+routerProduct.get('/productos/:id', findByProducts);
+routerProduct.put('/productos/:id', UpdateByProducts);
+routerProduct.delete('/productos/:id', deleteByProducts);
 
 module.exports = routerProduct;

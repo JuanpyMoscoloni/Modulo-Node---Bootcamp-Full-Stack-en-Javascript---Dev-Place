@@ -6,10 +6,10 @@ import axios from "axios";
 import Form from "react-bootstrap/Form";
 
 export default function CrearPublicacion() {
-  const url = "http://localhost:5050/productos/post";
+  const url = "http://localhost:5050/productos";
 
   const [title, setTitle] = useState("");
-  const [precio, setPrecio] = useState("");
+  const [price, setPrice] = useState("");
   const [type, setType] = useState("");
   const [img, setImg] = useState("");
   const [quantity, setQuantity] = useState("");
@@ -19,7 +19,7 @@ export default function CrearPublicacion() {
     try {
       var bodyFormData = new FormData();
       bodyFormData.append("title", title);  
-      bodyFormData.append("precio", precio);
+      bodyFormData.append("price", price);
       bodyFormData.append("type", type);
       bodyFormData.append("img", img[0]);
       bodyFormData.append("quantity", quantity);
@@ -62,10 +62,10 @@ export default function CrearPublicacion() {
                   type="number"
                   className=""
                   placeholder="Precio"
-                  value={precio}
-                  onChange={(e) => setPrecio(e.target.value)}
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
                 />
-                 <MDBInput placeholder="Cantidad" id='typeNumber' type='number' value={quantity}
+                 <MDBInput placeholder="Cantidad" id='typeCantidad' type='number' value={quantity}
                 onChange={(e) => setQuantity(e.target.value)} />
               </div>
               <Form.Select

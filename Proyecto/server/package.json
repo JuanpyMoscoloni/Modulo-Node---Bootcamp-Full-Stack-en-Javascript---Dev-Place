@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/domm1828/cursoNodejs.git"
+    "url": "git+https://github.com/JuanpyMoscoloni"
   },
   "keywords": [
     "curso",
     "nodejs",
     "backend"
   ],
-  "author": "Duglas Moreno",
+  "author": "Moscoloni Juan Pablo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/domm1828/cursoNodejs/issues"

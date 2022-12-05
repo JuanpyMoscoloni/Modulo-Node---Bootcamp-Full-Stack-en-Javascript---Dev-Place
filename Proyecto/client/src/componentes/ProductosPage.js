@@ -8,22 +8,32 @@ import { Titulo } from "./Titulos/Titulo";
 import Form from "react-bootstrap/Form";
 import { CreateCard } from "./Productos/CardsProductos";
 import { Row, Col } from "react-bootstrap";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import CardGroup from "react-bootstrap/CardGroup";
-import cartas from "../componentes/data/data"
-
+import axios from 'axios';
 
 function ProductosPage({}) {
   let productosFiltrados = [];
   const [busqueda, setBusqueda] = useState("");
-  const productos = cartas;
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+      async function productosDB() {
+          const res = await axios.get('http://localhost:5050/productos');
+          setProducts(res);
+      }
+      productosDB();
+  }, []);
+
+  console.log(products)
 
  function buscarProduct(e) {
     setBusqueda(e.target.value.toLowerCase());
   }
 
   if (busqueda) {
-    productosFiltrados = productos.filter((a) =>
+    productosFiltrados = products.filter((a) =>
       a.title.toLowerCase().includes(busqueda)
     );
   }
@@ -60,10 +70,10 @@ function ProductosPage({}) {
                 />
               );
             })
-          : cartas.map((productItem, index) => {
+          : products.map((productItem, index) => {
               return (
                 <CreateCard
-                  key={productItem.id}
+                  key={index}
                   img={productItem.img}
                   title={productItem.title}
                   price={productItem.price}
