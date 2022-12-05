@@ -13,6 +13,7 @@ export default function CrearPublicacion() {
   const [type, setType] = useState("");
   const [img, setImg] = useState("");
   const [quantity, setQuantity] = useState("");
+  const [random, setRandom] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,6 +24,7 @@ export default function CrearPublicacion() {
       bodyFormData.append("type", type);
       bodyFormData.append("img", img[0]);
       bodyFormData.append("quantity", quantity);
+      bodyFormData.append("random", random);
 
       const resp = await axios.post(url, bodyFormData, {
         headers: { "Content-Type": "multipart/form-data" },
@@ -74,9 +76,9 @@ export default function CrearPublicacion() {
                 onChange={(e) => setType(e.target.value)}
               >
                 <option value="">Ninguno</option>
-                <option value="1">iPhone</option>
-                <option value="2">iPad</option>
-                <option value="3">iWatch</option>
+                <option value="iPhone">iPhone</option>
+                <option value="iPad">iPad</option>
+                <option value="iWatch">iWatch</option>
               </Form.Select>
               <MDBInputGroup
                 className="mb-1 mt-3"

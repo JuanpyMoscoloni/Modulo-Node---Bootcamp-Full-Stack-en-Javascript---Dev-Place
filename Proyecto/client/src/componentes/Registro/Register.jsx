@@ -8,8 +8,38 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit";
 import './Form.css';
+import {useState} from 'react';
+import axios from 'axios';
 
 export default function Formulario() {
+  const url = "http://localhost:5050/users";
+
+  const [first_name, setFirstname] = useState("");
+  const [last_name, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      var users = {
+        first_name: first_name,
+        last_name: last_name,
+        email: email,
+        password: password,
+      };
+
+      const resp = await axios.post(url, users, {
+        headers: { "Content-Type": "application/json" },
+      });
+      console.log(resp.data);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+
+  
+
   return (
     <MDBRow className="mt-5">
       <MDBCol className="d-flex justify-content-center container-imagen">
@@ -23,13 +53,15 @@ export default function Formulario() {
         
         <div className="container-form-group">
         <h1 className="text-center mt-3"> Register </h1>
-          <form className="m-3 p-4 justify-content-center flex-start">
+          <form className="m-3 p-4 justify-content-center flex-start" onSubmit={handleSubmit} >
             <MDBRow className="mb-4">
               <MDBCol>
-                <MDBInput id="form3Example1" placeholder="First name" />
+                <MDBInput id="form3Example1" placeholder="First name" value={first_name}
+                  onChange={(e) => setFirstname(e.target.value)}/>
               </MDBCol>
               <MDBCol>
-                <MDBInput id="form3Example2" placeholder="Last name" />
+                <MDBInput id="form3Example2" placeholder="Last name" value={last_name}
+                  onChange={(e) => setLastname(e.target.value)} />
               </MDBCol>
             </MDBRow>
             <MDBInput
@@ -37,12 +69,16 @@ export default function Formulario() {
               type="email"
               id="form3Example3"
               placeholder="Email address"
+              value={email}
+                  onChange={(e) => setEmail(e.target.value)}
             />
             <MDBInput
               className="mb-4"
               type="password"
               id="form3Example4"
               placeholder="Password"
+              value={password}
+                  onChange={(e) => setPassword(e.target.value)}
             />
 
             <MDBCheckbox
@@ -52,9 +88,9 @@ export default function Formulario() {
               defaultChecked
             />
 
-            <MDBBtn type="submit" className="mb-4" block>
+            <button type="submit" className="ripple ripple-surface btn btn-primary btn-block mb-4" block>
               Sign in
-            </MDBBtn>
+            </button>
 
             <div className="text-center">
               

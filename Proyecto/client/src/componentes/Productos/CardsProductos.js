@@ -1,20 +1,25 @@
 import Card from "react-bootstrap/Card";
 import "./CardsProductos.css";
-import CardGroup from "react-bootstrap/CardGroup";
 import { MDBIcon } from "mdb-react-ui-kit";
 import { Row, Col } from "react-bootstrap";
 import { useCart } from "react-use-cart";
-import cartas from "../data/data";
-import { productosFiltrados } from "../ProductosPage";
 
 
 export function CreateCard(props) {
+
   const { addItem } = useCart();
+  const item = {
+    id: props.id,
+    title: props.title,
+    price: props.price,
+    type: props.type,
+    img: props.img,
+  };
   return (
     <>
       <Col lg={4} sm={6} xl={2}>
         <Card
-          key={props.id}
+          id={props.id}
           style={{ width: "18rem" }}
           className="cartas-general"
         >
@@ -28,7 +33,7 @@ export function CreateCard(props) {
             </Card.Text>
             <button
               onClick={() => {
-                addItem(props.item);
+                addItem(item);
               }}
               className="ripple ripple-surface ripple-surface-light btn btn-dark button-cart"
             >

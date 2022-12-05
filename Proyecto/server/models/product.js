@@ -13,12 +13,16 @@ const productSchema = new mongoose.Schema({
     type: String,
   },
   type: {
-    type: Number,
+    type: String,
   },
   quantity: {
     type: Number,
     default: 1,
   },
+  random:{
+    type: Number,
+    unique: true,
+  }
 });
 
 const Product = mongoose.model("productos", productSchema);

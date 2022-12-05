@@ -36,7 +36,8 @@ const createProducts = async (req, res) => {
         price: req.body.price,
         img: urlImage,
         type: req.body.type,
-        quantity: req.body.quantity
+        quantity: req.body.quantity,
+        random: req.body.random
     }
 
     const products = new Product(modelData);
