@@ -19,10 +19,7 @@ const productSchema = new mongoose.Schema({
     type: Number,
     default: 1,
   },
-  random:{
-    type: Number,
-    unique: true,
-  }
+
 });
 
 const Product = mongoose.model("productos", productSchema);

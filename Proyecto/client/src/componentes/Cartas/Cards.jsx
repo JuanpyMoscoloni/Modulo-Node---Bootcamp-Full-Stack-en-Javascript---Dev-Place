@@ -7,19 +7,7 @@ import { CreateCard } from "../Productos/CardsProductos";
 import { React, useState } from "react";
 
 
-function generateRandom(min, max) {
-  min = Math.ceil(min);
-  max = Math.ceil(max);
-  return Math.floor(Math.random() * (1 + max - min) + min);
-}
 
-let carta1 = generateRandom(1, 8);
-let carta2 = generateRandom(1, 8);
-let carta3 = generateRandom(1, 8);
-let carta4 = generateRandom(1, 8);
-let carta5 = generateRandom(1, 8);
-let carta6 = generateRandom(1, 8);
-let carta7 = generateRandom(1, 8);
 
 function Cards() {
   const [products, setProducts] = useState([]);
@@ -34,16 +22,7 @@ function Cards() {
   return (
     <Container className="d-flex gap-4 justify-content-center mx-auto">
       {products.map((element) => {
-        if (
-          element.random === carta1 ||
-          element.random === carta2 ||
-          element.random === carta3 ||
-          element.random === carta4 ||
-          element.random === carta5 ||
-          element.random === carta6 ||
-          element.random === carta7 
-        ) 
-        {
+       
           console.log(element.random);
           return (
             <CreateCard
@@ -55,8 +34,9 @@ function Cards() {
                     
                   />
           );
-        }
-      })}
+      
+        })
+      }
     </Container>
   );
 }
@@ -64,7 +44,7 @@ function Cards() {
 export function CrearCard(props) {
   return (
     <>
-      <Container className="d-flex gap-4 justify-content-center mx-auto">
+      <Container className="d-flex justify-content-center mx-auto">
         <Card
           key={props.element.id}
           style={{ width: "18rem" }}
