@@ -34,7 +34,7 @@ export default function Formulario() {
       });
       console.log(resp.data);
     } catch (error) {
-      console.log(error.response);
+      console.log(error);
     }
   };
 

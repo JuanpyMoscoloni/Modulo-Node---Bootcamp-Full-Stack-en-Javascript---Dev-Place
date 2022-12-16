@@ -19,8 +19,8 @@ const productSchema = new mongoose.Schema({
     type: Number,
     default: 1,
   },
-
 });
+
 
 const Product = mongoose.model("productos", productSchema);
 
