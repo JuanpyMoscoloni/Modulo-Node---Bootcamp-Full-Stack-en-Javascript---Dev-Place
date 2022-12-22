@@ -1,9 +1,11 @@
-import CreateCard from "../components/Card/Card";
+import Carousel from "../components/HomePage/Carousel/Carousel";
+import Collage from "../components/HomePage/Collage/Collage";
 
 function HomePage() {
   return (
     <>
-      <CreateCard/>
+  <Carousel/>
+  <Collage/>
     </>
   );
 }

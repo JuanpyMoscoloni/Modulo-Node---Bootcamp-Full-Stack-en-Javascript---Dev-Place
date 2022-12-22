@@ -1,77 +1,100 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 export default function NavBar() {
+
+  const [nav, setNav] = useState(true);
+  
+
   return (
     <>
-      <nav class="bg-white shadow-lg fixed w-full top-0">
-        <div class="max-w-6xl mx-auto px-4">
-          <div class="flex justify-between">
-            <div class="flex space-x-7">
-              <NavLink to="/" class="flex items-center py-4 px-2">
+    {!nav && (
+        <div className="absolute z-10 m-auto flex h-full w-full flex-col items-center justify-center gap-10 overflow-y-hidden bg-white text-5xl text-black">
+          <Link  className="" to="/">
+            Home
+          </Link>
+          <Link  to="/">
+            Sneaker
+          </Link>
+          <Link  to="/">
+           Register
+          </Link>
+          <Link  to="/">
+            Login
+          </Link>
+        </div>
+      )}
+      <nav className="bg-white shadow-lg fixed w-full z-50 top-0 left-0">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex justify-between">
+            <div className="flex space-x-7">
+              <Link to="/" className="flex items-center py-4 px-2">
                 <img
                   src="../public/img/zapatillas.png"
                   alt="Logo"
-                  class="h-8 w-8 mr-2"
+                  className="h-8 w-8 mr-2"
                 />
-                <span class="font-semibold text-gray-500 text-lg">SNKR</span>
-              </NavLink>
+                <span className="font-semibold text-gray-500 text-lg">SNKR</span>
+              </Link>
             </div>
-            <div class="hidden md:flex items-center space-x-1">
-              <a
-                href=""
-                class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
+            <div className="hidden md:flex items-center space-x-1">
+              <Link
+                to="/"
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
               >
                 Home
-              </a>
-              <a
-                href=""
-                class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
+              </Link>
+              <Link
+                to="/sneakers"
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
               >
                 Sneaker
-              </a>
-              <a
-                href=""
-                class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
+              </Link>
+              <Link
+                to=""
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
               >
                 Register
-              </a>
-              <NavLink
+              </Link>
+              <Link
                 to="/login"
-                class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
               >
+               
                 Login
-              </NavLink>
+              </Link>
             </div>
 
-            <div class="md:hidden flex items-center">
-              <button class="outline-none menu-button">
+            <div className="md:hidden flex items-center">
+              <button className="outline-none menu-button">
                 <svg
-                  class="w-6 h-6 text-gray-500"
+                onClick={() => setNav(!nav)}
+                  className="w-6 h-6 text-gray-500"
                   x-show="! showMenu"
                   fill="none"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
                   viewBox="0 00 24 24"
-                  stroke="currentColor"
+                  stroke="black"
                 >
                   <path d="m4 6h16M4 12h16M4 18h16"></path>
                 </svg>
               </button>
             </div>
 
-            <div class="hidden mobile-menu">
-              <ul class="">
-                <li class="active">
+            <div className="hidden mobile-menu">
+              <ul className="">
+                <li className="active">
                   <a
                     href="nav.html"
-                    class="block text-sm px-2 py-4 text-white bg-purple-500 font-semibold"
+                    className="block text-sm px-2 py-4 text-white bg-purple-500 font-semibold"
                   />
                   Home
                 </li>
                 <li>
                   <a
                     href="#services"
-                    class="block.text-sm.px-2.py-4 hover:bg-purple-500 transition duration-300"
+                    className="block.text-sm.px-2.py-4 hover:bg-purple-500 transition duration-300"
                   >
                     Services
                   </a>
@@ -79,7 +102,7 @@ export default function NavBar() {
                 <li>
                   <a
                     href="#About"
-                    class="block.text-sm.px-2.py-4 hover:bg-purple-500 transition duration-300"
+                    className="block.text-sm.px-2.py-4 hover:bg-purple-500 transition duration-300"
                   >
                     About
                   </a>
@@ -87,7 +110,7 @@ export default function NavBar() {
                 <li>
                   <a
                     href="#Contact Us"
-                    class="block.text-sm.px-2.py-4 hover:bg-purple-500 transition duration-300"
+                    className="block.text-sm.px-2.py-4 hover:bg-purple-500 transition duration-300"
                   >
                     Contact Us
                   </a>

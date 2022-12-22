@@ -1,5 +1,5 @@
 
-import LoginUser from "../components/Login/LoginUser";
+import LoginUser from "../components/LoginPage/Login/LoginUser";
 
 
 function LoginPage() {
