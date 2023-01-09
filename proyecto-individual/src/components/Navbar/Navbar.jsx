@@ -9,16 +9,16 @@ export default function NavBar() {
     <>
     {!nav && (
         <div className="absolute z-10 m-auto flex h-full w-full flex-col items-center justify-center gap-10 overflow-y-hidden bg-white text-5xl text-black">
-          <Link  className="" to="/">
+          <Link  className="text-5xl font-semibold text-gray-700" to="/">
             Home
           </Link>
-          <Link  to="/">
+          <Link className="text-5xl font-semibold text-gray-700" to="/sneakers">
             Sneaker
           </Link>
-          <Link  to="/">
+          <Link className="text-5xl font-semibold text-gray-700" to="/register">
            Register
           </Link>
-          <Link  to="/">
+          <Link className="text-5xl font-semibold text-gray-700" to="/login">
             Login
           </Link>
         </div>
@@ -39,25 +39,25 @@ export default function NavBar() {
             <div className="hidden md:flex items-center space-x-1">
               <Link
                 to="/"
-                className="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-green-800 transition duration-100"
               >
                 Home
               </Link>
               <Link
                 to="/sneakers"
-                className="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-green-800 transition duration-100"
               >
                 Sneaker
               </Link>
               <Link
-                to=""
-                className="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
+                to="/register"
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-green-800  transition duration-100"
               >
                 Register
               </Link>
               <Link
                 to="/login"
-                className="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-green-800 transition duration-100"
               >
                
                 Login

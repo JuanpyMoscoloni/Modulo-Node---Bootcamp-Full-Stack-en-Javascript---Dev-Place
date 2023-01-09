@@ -15,26 +15,26 @@
                   <Swiper
                       navigation={true}
                       modules={[Navigation]}
-                      className="mySwiper"
+                      className="mySwiper w-3/4 mb-4 mt-24 max-lg:w-full max-lg:p-0"
                   >
                       <SwiperSlide>
                           <img
                               className="object-fill w-full h-94"
-                              src="https://img.freepik.com/free-vector/sport-shoes-sneakers-set_74855-313.jpg"
+                              src="https://images.contentstack.io/v3/assets/blt818b0c67cf450811/blt211e86a8a7352743/63aaffa47760ab1f00afffe4/Boxing_Day_AssetsPrimary_Desktop.jpg?quality=90&auto=webp&format=pjpg&height=450"
                               alt="image slide 1"
                           />
                       </SwiperSlide>
                       <SwiperSlide>
                           <img
                               className="object-fill w-full h-94"
-                              src="https://img.freepik.com/premium-psd/sport-sneakers-shoes-sale-social-media-instagram-post-facebook-web-banner-template_70055-1334.jpg?w=996"
+                              src="https://images.contentstack.io/v3/assets/blt818b0c67cf450811/blt1ed47d978aa17f7b/63ab121299beb9105fe6e2e0/Dunk_Low_General_BannersPrimary_Desktop.jpg?quality=90&auto=webp&format=pjpg&height=450"
                               alt="image slide 2"
                           />
                       </SwiperSlide>
                       <SwiperSlide>
                           <img
                               className="object-fill w-full h-94"
-                              src="https://img.freepik.com/premium-psd/sport-sneakers-shoes-sale-social-media-instagram-post-facebook-web-banner-template_70055-1761.jpg?w=740"
+                              src="https://images.contentstack.io/v3/assets/blt818b0c67cf450811/blta07714ece0cb6f96/63864ac85bbc641099351e6e/AJ1_General_BannersPrimary_Desktop.jpg?quality=90&auto=webp&format=pjpg&height=450"
                               alt="image slide 3"
                           />
                       </SwiperSlide>

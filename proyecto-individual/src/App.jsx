@@ -3,7 +3,8 @@ import NavBar from './components/Navbar/Navbar';
 import LoginPage from './Pages/LoginPage';
 import HomePage from "./Pages/HomePage"
 import SneakerPage from "./Pages/SneakerPage";
-
+import RegisterPage from "./Pages/RegisterPage";
+import Footer from "./components/Footer/Footer";
 function App() {
 
   return (
@@ -13,8 +14,11 @@ function App() {
     <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/login" element={<LoginPage />} />
+    <Route path="/register" element={<RegisterPage />} />
     <Route path="/sneakers" element={<SneakerPage />} />
+
     </Routes>
+    <Footer/>
     </BrowserRouter>
     </>
   )

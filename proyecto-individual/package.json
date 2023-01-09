@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.2.1",
+    "flowbite": "^1.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.5",
@@ -22,6 +24,7 @@
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4",
+    "tailwindcss-text-fill-stroke": "^1.1.2",
     "vite": "^4.0.0"
   }
 }
