@@ -22,9 +22,9 @@ export default function Cart() {
     );
   return (
     <>
-      <section className="section-carrito">
-        <section className="carrito">
-          <div className="container-title-carrito">
+      <section className="pt-[20rem]">
+        <section className="">
+          <div className=" mt-[24rem]">
             <div className="cart-total">
               <h5>CART TOTAL: {cartTotal}</h5>
             </div>

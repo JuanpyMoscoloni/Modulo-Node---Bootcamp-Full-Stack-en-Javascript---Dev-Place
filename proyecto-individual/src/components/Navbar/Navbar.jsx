@@ -62,6 +62,13 @@ export default function NavBar() {
                
                 Login
               </Link>
+              <Link to="/cart" className="flex items-center py-4 px-2">
+                <img
+                  src="../public/img/cart.png"
+                  alt="Logo"
+                  className="h-6 w-6 mr-2"
+                />
+              </Link>
             </div>
 
             <div className="md:hidden flex items-center">

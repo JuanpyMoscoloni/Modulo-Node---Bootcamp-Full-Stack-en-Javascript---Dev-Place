@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 import "./CardsProductos.css";
 import { MDBIcon } from "mdb-react-ui-kit";
 import { Row, Col } from "react-bootstrap";
-import { useCart } from "react-use-cart";
+  import { useCart } from "react-use-cart";
 
 
 export function CreateCard(props) {

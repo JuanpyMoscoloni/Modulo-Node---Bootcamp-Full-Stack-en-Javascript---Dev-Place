@@ -1,41 +1,43 @@
 {
-  "name": "sneaks-api",
-  "version": "1.2.1",
-  "description": "A RESTful API that collects and returns data on sneakers. This API will also find, compare and return a link of where to buy the sneaker based on the price.",
-  "main": "index.js",
+  "name": "cursonodejs",
+  "version": "0.0.1",
+  "description": "Curso de Node Js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/druv5319/Sneaks-API.git"
+    "url": "git+https://github.com/JuanpyMoscoloni"
   },
   "keywords": [
-    "sneakers",
-    "shoes",
-    "goat",
-    "stadium goods",
-    "flight club",
-    "stockx",
-    "restful",
-    "api",
-    "nodejs"
+    "curso",
+    "nodejs",
+    "backend"
   ],
-  "author": "druv5319@gmail.com",
-  "license": "MIT",
+  "author": "Moscoloni Juan Pablo",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/druv5319/Sneaks-API/issues"
+    "url": "https://github.com/domm1828/cursoNodejs/issues"
   },
-  "homepage": "https://github.com/druv5319/Sneaks-API#readme",
+  "homepage": "https://github.com/domm1828/cursoNodejs#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "core-util-is": "^1.0.2",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "got": "^11.6.0",
-    "mongoose": "^5.10.3",
-    "request": "^2.65.0"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "http-errors": "^2.0.0",
+    "joi": "^17.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.3",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "node-modules": "^1.0.1",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7",
+    "sequelize": "^6.25.8"
   }
 }

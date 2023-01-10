@@ -28,5 +28,7 @@ module.exports = {
       animation: { marquee: 'move letters',},
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin'),
+  require('tailwindcss'),
+  require('autoprefixer')],
 }

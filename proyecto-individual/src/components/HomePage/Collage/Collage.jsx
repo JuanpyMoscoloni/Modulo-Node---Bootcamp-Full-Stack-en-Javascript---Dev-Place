@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Collage() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function Collage() {
           />
         </div>
         <div className="flex flex-col gap-4 justify-center">
+          <Link rel="stylesheet" to="/sneakers">
           <div className="flex justify-center items-center">
             <h1 className="z-20 absolute text-2xl font-medium text-white shadow-outline ">
               SNEAKERS
@@ -26,7 +28,10 @@ export default function Collage() {
               src="https://www.kickz.com/on/demandware.static/-/Library-Sites-kickz-content-global/default/images/HOME/KW50/kickz-adidas.jpg"
               alt=""
             />
+              
             </div>
+            </Link>
+            <Link rel="stylesheet" to="/sneakers">
             <div className="flex justify-center items-center">
             <h1 className="z-20 absolute text-2xl font-medium text-white shadow-outline ">
               SNEAKERS
@@ -37,6 +42,7 @@ export default function Collage() {
               alt=""
             />
             </div>
+            </Link>
           </div>
         </div>
     </>
