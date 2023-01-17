@@ -1,0 +1,37 @@
+.container-login-group{
+    margin: auto;
+    border: 2px solid rgb(227, 227, 227);
+    border-radius: 1rem;
+    margin-top: 21%;
+    margin-bottom: 20%;
+}
+
+.container-login-group h1{
+    width: 100%;
+    margin-top: 3rem;
+}
+.container-button-login{
+    display: flex;
+    justify-content: center;
+    }
+.container-button-login button{
+width: auto;
+}
+
+#formExample3{
+    width: 50%;
+    margin-left: 25%;
+}
+
+#formExample4{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.form-check{
+    display: flex;
+    justify-content: center;
+}
+.form-check-input{
+    left:35%
+}
